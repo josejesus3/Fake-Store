@@ -1,1 +1,32 @@
-<p>product-list works!</p>
+<section class="container-fluid  bg-light py-3">
+  <div class="row  g-3 g-md-3 g-lg-4 row-cols-2 row-cols-md-3  row-cols-lg-4 row-cols-xl-5">
+    @for (product of productos; track product.id) {
+      <div class="col d-flex">
+        <div class="card border-0 shadow-sm  rounded-4">
+          <div class="text-center rounded-top-3 bg-dark-subtle  ">
+            <img
+              [src]="product.image"
+              alt="{{ product.title }}"
+              class="img-fluid"
+              style="height: 180px; width: auto; object-fit: contain"
+            />
+          </div>
+          <div class="card-body  p-md-2  d-flex flex-column">
+            <h6 class="fw-bold fs-6">{{ product.title }}</h6>
+            <p class="small text-muted d-none d-md-block ">
+              {{ product.description }}
+            </p>
+            <div class="mt-auto">
+              <span class="fs-5 fw-bold d-block mb-2"
+                >$ {{ product.price }}</span
+              >
+              <button class="btn btn-primary btn-sm w-100">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>
