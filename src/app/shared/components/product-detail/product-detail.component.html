@@ -8,13 +8,14 @@
     <div class="list-group list-group-flush">
       @for (item of categories; track $index) {
         <button
-          class="list-group-item list-group-item-action d-flex justify-content-between fs-5"
-       
+          class="list-group-item list-group-item-action d-flex justify-content-between fs-5" (click)="getCategoriaList.getProductCategorie(item)"
         >
-          {{ item | titlecase }}<i class="bi bi-chevron-right"></i>
+          {{ item | titlecase
+          }}<i
+            class="bi bi-chevron-right"
+          ></i>
         </button>
       }
     </div>
   </div>
 </section>
-

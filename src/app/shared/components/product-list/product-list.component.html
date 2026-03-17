@@ -12,14 +12,11 @@
             />
           </div>
           <div class="card-body  p-md-2  d-flex flex-column">
-            <h6 class="fw-bold fs-6">{{ product.title }}</h6>
-            <p class="small text-muted d-none d-md-block ">
-              {{ product.description }}
-            </p>
+            <h6 class="fw-bold fs-6">{{ product.title|slice:0:55}} ...</h6>
+            
             <div class="mt-auto">
               <span class="fs-5 fw-bold d-block mb-2"
-                >$ {{ product.price }}</span
-              >
+                >$ {{ product.price}}</span>
               <button class="btn btn-primary btn-sm w-100">
                 Añadir al Carrito
               </button>
