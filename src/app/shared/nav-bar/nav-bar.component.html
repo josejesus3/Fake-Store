@@ -5,24 +5,27 @@
     <a class="navbar-brand fw-bold text-primary" href="#">Modern Shop2</a>
     <button
       class="navbar-toggler"
-      type=" button"
+      type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navCont"
+      data-bs-target="#navbarToggle"
+      aria-controls="navbarToggle"
+      aria-expanded="false"
+       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navCont">
+    <div class="collapse navbar-collapse" id="navbarToggle">
       <div class="input-group mx-lg-auto my-3 my-lg-0" style="max-width: 500px">
         <input class="form-control" type="text" placeholder="Buscador..." />
         <button class="btn btn-primary" type="button">
           <i class="bi bi-search"></i>
         </button>
       </div>
-      <ul class=" navbar-nav d-lg-none">
+      <ul class="navbar-nav d-lg-none">
         <li class="nav-item fw-bold mb-2">Categorías</li>
         @for (item of categories; track $index) {
-          <li class=" nav-item list-group-item-action list-group "><a class="nav-link text-capitalize"href="">{{item}}</a></li>
+          <li class=" nav-item list-group-item-action list-group "><a class="nav-link text-capitalize">{{item}}</a></li>
         }
         
       </ul>
